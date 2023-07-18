@@ -1,0 +1,21 @@
+.nav-links li a{
+    margin: 0 8px;
+    padding: 8px;
+}
+.nav-links li a:hover{
+    border-bottom: 2px solid #16a34a;
+}
+@media only screen and (max-width: 768px){
+    .nav-links{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+    }
+    .nav-links li{
+        margin: 15px 0;
+    }
+}
