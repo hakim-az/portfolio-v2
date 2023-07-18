@@ -1,6 +1,24 @@
+import Cv from "../Cv/Cv"
 import Title from "../Title/Title"
+// SKILLS
+import Html from '../../assets/skills/html.svg'
+import Css from '../../assets/skills/css.svg'
+import Javascript from '../../assets/skills/javascript.svg'
+import Sass from '../../assets/skills/sass.svg'
+import Tailwind from '../../assets/skills/tailwind-css.svg'
+import Bootstrtap from '../../assets/skills/bootstrap.svg'
+import Figma from '../../assets/skills/figma.svg'
+import ReactJs from '../../assets/skills/react-js.svg'
+import NodeJs from '../../assets/skills/node-js.svg'
+import ExpressJs from '../../assets/skills/express-js.svg'
+import NextJs from '../../assets/skills/nextjs-icon.svg'
+import Gatsby from '../../assets/skills/gatsbyjs.svg'
+import CvBlock from "../CvBlock/CvBlock"
 
 const About = () => {
+
+    const skills = [Html, Css, Sass, Bootstrtap, Tailwind, Figma, Javascript, ReactJs, NodeJs, ExpressJs, NextJs, Gatsby];
+
   return (
     <section id="about" className="bg-gray-900 py-40 ">
         <div className="box-container">
@@ -21,6 +39,24 @@ const About = () => {
             <div className="w-2/5 max-[768px]:mb-10" style={{minWidth: '350px'}}>
                 <img className="w-96 h-96 bg-white rounded" src="#" alt=".." />
             </div>
+        </div>
+        <div className="box-container flex items-start justify-evenly flex-wrap">
+            {/* education */}
+            <Cv Title='Education'>
+                <CvBlock Title='Baccalauréat - Mathématiques'   Position='Lycée El mokrani' Date='2016 - 2019' />
+                <CvBlock Title='Baccalauréat - Mathématiques'   Position='Lycée El mokrani' Date='2016 - 2019' />
+                <CvBlock Title='Baccalauréat - Mathématiques'   Position='Lycée El mokrani' Date='2016 - 2019' />
+            </Cv>
+            {/* experience */}
+            <Cv Title='Experience'>
+                <CvBlock Title='All Vibes Agency'   Position='Frontend Developer' Date='2020 - 2022' />
+                <CvBlock Title='All Vibes Agency'   Position='Frontend Developer' Date='2020 - 2022' />
+                <CvBlock Title='All Vibes Agency'   Position='Frontend Developer' Date='2020 - 2022' />
+            </Cv>
+            {/* skills */}
+            <Cv Title='Skills'>
+                {skills.map((skill) =>  <img className="w-1/4 p-2 hover:bg-green-400 rounded cursor-pointer" src={skill} alt=".." />)}
+            </Cv>
         </div>
     </section>
   )
