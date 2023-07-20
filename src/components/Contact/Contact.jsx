@@ -75,11 +75,6 @@ const Contact = () => {
             </div>
             {/* Contact form */}
             <form onSubmit={handleSubmit} className="w-2/5" style={{minWidth: '350px'}}>
-                {/* Hidden */}
-                <input type="hidden" name="form-name" value="contact v1" />
-                <div hidden>
-                    <input name="bot-field" />
-                </div>
                 {/* input */}
                 <div className="flex flex-col mb-5">
                     <label htmlFor="name" className="text-white text-lg pb-2" >Full name</label>
