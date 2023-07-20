@@ -22,13 +22,13 @@ const Contact = () => {
     const validate = (formData) => {
             let formErrors = {}
             if(!formData.name){
-                formErrors.name = "Name required"
+                formErrors.name = "Name required *"
             }
             if(!formData.email){
-                formErrors.email = "Email required"
+                formErrors.email = "Email required *"
             } 
             if(!formData.message){
-                formErrors.message = "Message is required"
+                formErrors.message = "Message is required *"
             }
             return formErrors
         }
@@ -78,21 +78,22 @@ const Contact = () => {
                 {/* input */}
                 <div className="flex flex-col mb-5">
                     <label htmlFor="name" className="text-white text-lg pb-2" >Full name</label>
-                    <input type="text" name="full-name" id="name" value={formData.name} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
+                    <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
+                    {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>} 
                 </div>
-                {errors.name && <p>{errors.name}</p>} 
+                
                 {/* input */}
                 <div className="flex flex-col mb-5">
                     <label htmlFor="email" className="text-white text-lg pb-2" >Email</label>
                     <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
-                </div>
-                {errors.email && <p>{errors.email}</p>} 
+                    {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
+                </div> 
                 {/* input */}
                 <div className="flex flex-col">
                     <label htmlFor="message" className="text-white text-lg pb-2" >Message</label>
                     <textarea name="message"  id="message" value={formData.message} onChange={handleChange} className="p-3 border-2 focus:border-green-600 text-lg outline-none rounded" style={{height : '150px', resize: 'none'}} ></textarea>
+                    {errors.message && <p className='text-red-500 text-sm '>{errors.message}</p>}
                 </div>
-                {errors.message && <p>{errors.message}</p>} 
                 {/* Button */}
                 <button type="submit" className='mt-5 float-right px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500'>Submit</button>
             </form>
