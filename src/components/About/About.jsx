@@ -15,11 +15,12 @@ import Gatsby from '../../assets/skills/gatsbyjs.svg'
 import Git from '../../assets/skills/git.svg'
 import Ts from '../../assets/skills/typescript.svg'
 import Mui from '../../assets/skills/mui.svg'
+import Framer from '../../assets/skills/framer.png'
 import CvBlock from "../CvBlock/CvBlock"
 
 const About = () => {
 
-    const skills = [Html, Css, Sass, Tailwind, Git, Javascript, ReactJs, Mui, Figma, Ts, NodeJs, ExpressJs, NextJs, Gatsby];
+    const skills = [Html, Css, Sass, Tailwind, Git, Javascript, ReactJs, Mui, Figma, Ts, NodeJs, ExpressJs, Framer, NextJs, Gatsby];
 
   return (
     <section id="about" className="bg-gray-900 py-40 ">
