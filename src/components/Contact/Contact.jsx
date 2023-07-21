@@ -1,95 +1,59 @@
-import {useState, useEffect} from 'react'
 import Title from "../Title/Title"
+import MessageImage from '../../assets/images/message.png'
+
+
+import Figma from '../../assets/social/figma.svg'
+import Github from '../../assets/social/github.svg'
+import Gmail from '../../assets/social/gmail.svg'
+import Linkedin from '../../assets/social/linkedin.svg'
+import Whatsapp from '../../assets/social/whatsapp.svg'
+import Form from "./Form"
+
 
 const Contact = () => {
 
-    const [formData, setFormData] = useState({name: "", email: "", message: ""})
-
-    const handleChange = e => {
-        const { name, value } = e.target
-        setFormData({...formData, [name]: value })
-    }
-
-
-    const [errors, setErrors] = useState({})
-
-    const validate = (formData) => {
-        let formErrors = {}
-        if(!formData.name){
-            formErrors.name = "Name required *"
-        }
-        if(!formData.email){
-            formErrors.email = "Email required *"
-        } 
-        if(!formData.message){
-            formErrors.message = "Message is required *"
-        }
-        return formErrors
-    }
-
-
-    const [isSubmitted, setIsSubmitted] = useState(false)
-
-    const handleSubmit = e => {
-        setErrors(validate(formData))
-        setIsSubmitted(true)
-        e.preventDefault();
-    }
-
-
-    useEffect(() => {
-        if(Object.keys(errors).length === 0 && isSubmitted){
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact-form", ...formData })
-            })
-            .then(() => alert('form submitted successfully'))
-            .then(() => setIsSubmitted(false))
-            .then(() => setFormData({name: "", email: "",  message: ""}))
-            .catch(error => alert(error))
-        }
-    }, [errors, formData, isSubmitted])
-
-
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-    }
+    const socials = [
+        {
+            id: 1,
+            image : Figma,
+            url: "https://figma.com/@hakimazzaz",
+        },
+        {
+            id: 2,
+            image : Github,
+            url: "https://github.com/hakim-az",
+        },
+        {
+            id: 3,
+            image : Gmail,
+            url: "mailto:azzazhakimou@gmail.com",
+        },
+        {
+            id: 4,
+            image : Linkedin,
+            url: "https://www.linkedin.com/in/abdelhakim-azzaz-27194a1b3/",
+        },
+        {
+            id: 5,
+            image : Whatsapp,
+            url: "tel:+231779991468",
+        },
+    ]
 
     return (
         <section id="contact" className="bg-gray-900 pb-10">
             <div className="box-container flex items-center justify-evenly flex-wrap">
                 <Title Title='Contact me' />
                 {/* Contact image */}
-                <div className="w-2/5 max-[768px]:mb-12 " style={{minWidth: '350px'}}>
-                    <img className="w-full h-80 bg-white rounded" src="#" alt="" />
+                <div className="w-2/5 max-[768px]:mb-12 flex items-center justify-center flex-col" style={{minWidth: '350px'}}>
+                    <h3 className='text-green-600 text-center text-4xl'>Get in touch !</h3>
+                    <img className=" w-60 rounded" src={MessageImage} alt="message-icon" />
+                    <div className="flex gap-4 mt-10">
+                        {socials.map((social) => <a href={social.url} target="_blank" key={social.id}> <img className="w-10 h-10 rounded hover:bg-green-500 p-1" src={social.image} alt="social-icon" /></a> )}
+                    </div>
                 </div>
                 {/* Contact form */}
-                <form onSubmit={handleSubmit} className="w-2/5" style={{minWidth: '350px'}}>
-                    {/* input */}
-                    <div className="flex flex-col mb-5">
-                        <label htmlFor="name" className="text-white text-lg pb-2" >Full name</label>
-                        <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
-                        {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>} 
-                    </div>
-                    
-                    {/* input */}
-                    <div className="flex flex-col mb-5">
-                        <label htmlFor="email" className="text-white text-lg pb-2" >Email</label>
-                        <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
-                        {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
-                    </div> 
-                    {/* input */}
-                    <div className="flex flex-col">
-                        <label htmlFor="message" className="text-white text-lg pb-2" >Message</label>
-                        <textarea name="message"  id="message" value={formData.message} onChange={handleChange} className="p-3 border-2 focus:border-green-600 text-lg outline-none rounded" style={{height : '150px', resize: 'none'}} ></textarea>
-                        {errors.message && <p className='text-red-500 text-sm '>{errors.message}</p>}
-                    </div>
-                    {/* Button */}
-                    <button type="submit" className='mt-5 float-right px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500'>Submit</button>
-                </form>
+                <Form />
             </div>
         </section>
     )
