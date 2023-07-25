@@ -1,5 +1,4 @@
 import Website from '../../assets/images/website.png'
-import Figma from '../../assets/images/white-figma.svg'
 import GitHub from '../../assets/skills/github.svg'
 
 
@@ -12,9 +11,6 @@ const Project = ({image, title, githubUrl, viewUrl, figmaUrl}) => {
         <div className='mt-3 flex items-center justify-between'>
             <h3 className='text-white text-xl font-medium'> {title} </h3>
             <div className='flex gap-3'>
-                <a href={figmaUrl} target="_blank">
-                    <img className=' w-7 h-7' src={Figma} alt="figma-icon" />
-                </a>
                 <a href={githubUrl} target="_blank">
                     <img className=' w-7 h-7' src={GitHub} alt="github-icon" />
                 </a>

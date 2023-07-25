@@ -22,7 +22,6 @@ const Projects = () => {
       title : 'Life Time',
       viewUrl : 'https://life-time.netlify.app/',
       githubUrl : '#',
-      figmaUrl : '#',
     },
     {
       id : 2,
@@ -30,71 +29,62 @@ const Projects = () => {
       title : 'Sunny',
       viewUrl : 'https://comforting-licorice-482ab1.netlify.app/',
       githubUrl : '#',
-      figmaUrl : '#',
     },
     {
       id : 3,
       image : ProjectThree,
       title : 'Furni Shop',
       viewUrl : 'https://furni-shop-dz.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/FurniShop',
     },
     {
       id : 4,
       image : ProjectFour,
       title : 'Agency Exconsultancy',
       viewUrl : 'https://agency-exconsultancy.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/agency',
     },
     {
       id : 5,
       image : ProjectFive,
       title : 'GPT-3 Website',
       viewUrl : 'https://gpt-3-website.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/GPT-3',
     },
     {
       id : 6,
       image : ProjectSix,
       title : 'Easy Bank',
       viewUrl : 'https://web-05-easybank.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/web-05-Easybank',
     },
     {
       id : 7,
       image : ProjectSeven,
       title : 'Blogr',
       viewUrl : 'https://web-03-blogr.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/web-03-Blogr',
     },
     {
       id : 8,
       image : ProjectHeight,
       title : 'Loop Studios',
       viewUrl : 'https://web-04-loopstudios.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/web-04-Loopstudios',
     },
     {
       id : 9,
       image : ProjectNine,
       title : 'Focal Portfolio',
       viewUrl : 'https://web-01-foacl-portfolio.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/web-01-FOCAL',
     },
     {
       id : 10,
       image : ProjectTen,
       title : 'Sunny Side',
       viewUrl : 'https://web-02-sunnyside.netlify.app/',
-      githubUrl : '#',
-      figmaUrl : '#',
+      githubUrl : 'https://github.com/hakim-az/web-02-Sunnyside',
     }
   ];
 
@@ -115,7 +105,7 @@ const Projects = () => {
         <div className="box-container flex items-center justify-evenly flex-wrap">
             <Title Title='Projetcs'/>
             {/* Projects */}
-            {projects.slice(0,more).map((project) => <Project key={project.id} image={project.image} title={project.title} viewUrl={project.viewUrl} githubUrl={project.githubUrl} figmaUrl={project.figmaUrl} /> )}
+            {projects.slice(0,more).map((project) => <Project key={project.id} image={project.image} title={project.title} viewUrl={project.viewUrl} githubUrl={project.githubUrl} /> )}
             {/* Button view more/less */}
             {
               view 
