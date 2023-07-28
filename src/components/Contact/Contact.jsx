@@ -41,7 +41,7 @@ const Contact = () => {
     ]
 
     return (
-        <section id="contact" className="bg-gray-900 pb-10">
+        <section id="contact" className="pt-24">
             <div className="box-container flex items-center justify-evenly flex-wrap">
                 <Title Title='Contact me' />
                 {/* Contact image */}

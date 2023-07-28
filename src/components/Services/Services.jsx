@@ -39,7 +39,7 @@ const Services = () => {
 
 
   return (
-    <section id="services" className="bg-slate-900">
+    <section id="services" className="pt-24">
         <div className="box-container flex flex-wrap justify-evenly items-stretch">
             <Title Title='Services'/>
             {services.map((service) => <Service key={service.id} title={service.title} description={service.description} /> )}

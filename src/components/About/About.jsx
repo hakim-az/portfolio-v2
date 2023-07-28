@@ -23,7 +23,7 @@ const About = () => {
     const skills = [Html, Css, Sass, Tailwind, Git, Javascript, ReactJs, Mui, Figma, Ts, NodeJs, ExpressJs, Framer, NextJs, Gatsby];
 
   return (
-    <section id="about" className="bg-gray-900 py-40 ">
+    <section id="about" className="pt-24">
         <div className="box-container">
         <Title Title='About me'/>
         </div>
@@ -40,7 +40,7 @@ const About = () => {
             </div>
             {/* About image */}
             <div className="w-2/5 max-[768px]:mb-10" style={{minWidth: '350px'}}>
-                <img className="w-96 h-96 bg-white rounded" src="#" alt=".." />
+                <img className="w-96 h-96 bg-white rounded mx-auto" src="#" alt=".." />
             </div>
         </div>
         <div className="box-container flex items-start justify-evenly flex-wrap">

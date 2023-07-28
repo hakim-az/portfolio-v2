@@ -101,7 +101,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className='bg-gray-900 pb-20'>
+    <section id="projects" className='pt-24'>
         <div className="box-container flex items-center justify-evenly flex-wrap">
             <Title Title='Projetcs'/>
             {/* Projects */}
