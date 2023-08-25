@@ -1,5 +1,6 @@
 import HeroImage from '../../assets/images/hero.png'
 import { motion } from "framer-motion"
+import CvFile from '../../assets/cv-eng.pdf'
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
                 <h2 className='text-green-600 text-4xl mt-8'>React Js Developer</h2>
                 <div className='mt-20 flex gap-8'>
                     <a className='px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500' href="#contact">Get in touch</a>
-                    <a className='px-5 py-2 bg-white rounded-sm text-base text-green-600 hover:bg-green-500 hover:text-white' href="#">Get Resume</a>
+                    <a href={CvFile} download="azzaz-abdelhakim-cv.pdf" className='px-5 py-2 bg-white rounded-sm text-base text-green-600 hover:bg-green-500 hover:text-white'  >Get Resume</a>
                 </div>
             </motion.div>
             {/* Hero image */}

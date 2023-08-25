@@ -1,5 +1,7 @@
 import Cv from "../Cv/Cv"
 import Title from "../Title/Title"
+import CvFile from '../../assets/cv-eng.pdf'
+
 // SKILLS
 import Html from '../../assets/skills/html.svg'
 import Css from '../../assets/skills/css.svg'
@@ -37,7 +39,7 @@ const About = () => {
                 <p className="text-white py-4 text-justify">
                     As a <span className="inline text-green-600">Frontend developer</span>, I thrive on transforming ideas and concepts into delightful user experiences. With a keen eye for design and an understanding of user behavior, I craft intuitive and responsive web applications that not only look fantastic but also provide seamless interactions. My proficiency in React Js allows me to build dynamic and cutting-edge websites that cater to the needs of modern-day users.
                 </p >
-                <a className='mt-8 inline-block px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500' href="#">Get Resume</a>
+                <a href={CvFile} download="azzaz-abdelhakim-cv.pdf" className='mt-8 inline-block px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500'>Get Resume</a>
             </motion.div>
             {/* About image */}
             <motion.div initial={{ opacity:0, x: '300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="w-2/5 max-[768px]:mb-10" style={{minWidth: '350px'}}>
