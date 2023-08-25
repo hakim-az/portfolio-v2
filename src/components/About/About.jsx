@@ -17,6 +17,7 @@ import Ts from '../../assets/skills/typescript.svg'
 import Mui from '../../assets/skills/mui.svg'
 import Framer from '../../assets/skills/framer.png'
 import CvBlock from "../CvBlock/CvBlock"
+import { motion } from "framer-motion"
 
 const About = () => {
 
@@ -29,7 +30,7 @@ const About = () => {
         </div>
         <div className="box-container flex items-center justify-evenly flex-wrap max-[768px]:flex-col-reverse">
             {/* About content */}
-            <div className="w-2/5" style={{minWidth: '350px'}}>
+            <motion.div initial={{ opacity:0, x: '-300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="w-2/5" style={{minWidth: '350px'}}>
                 <p className="text-white py-4 text-justify">
                     I'm <span className="inline text-green-600">Azzaz Abdelhakim</span> a passionate and dedicated individual with a unique blend of skills, combining my expertise as a frontend React.js web developer with my ongoing studies in network administration as a Master's degree student at the university.
                 </p>
@@ -37,13 +38,13 @@ const About = () => {
                     As a <span className="inline text-green-600">Frontend developer</span>, I thrive on transforming ideas and concepts into delightful user experiences. With a keen eye for design and an understanding of user behavior, I craft intuitive and responsive web applications that not only look fantastic but also provide seamless interactions. My proficiency in React Js allows me to build dynamic and cutting-edge websites that cater to the needs of modern-day users.
                 </p >
                 <a className='mt-8 inline-block px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500' href="#">Get Resume</a>
-            </div>
+            </motion.div>
             {/* About image */}
-            <div className="w-2/5 max-[768px]:mb-10" style={{minWidth: '350px'}}>
+            <motion.div initial={{ opacity:0, x: '300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="w-2/5 max-[768px]:mb-10" style={{minWidth: '350px'}}>
                 <img className="w-96 h-96 bg-white rounded mx-auto" src="#" alt=".." />
-            </div>
+            </motion.div>
         </div>
-        <div className="box-container flex items-start justify-evenly flex-wrap">
+        <motion.div initial={{ opacity:0, x: '-300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="box-container flex items-start justify-evenly flex-wrap">
             {/* education */}
             <Cv Title='Education'>
                 <CvBlock Title='Baccalaureate - Mathematics'   Position='High School El Mokrani' Date='2016 - 2019' />
@@ -60,7 +61,7 @@ const About = () => {
             <Cv Title='Skills'>
                 {skills.map((skill, index) =>  <img key={index} className="w-1/4 p-2 hover:bg-green-400 rounded cursor-pointer" src={skill} alt=".." />)}
             </Cv>
-        </div>
+        </motion.div>
     </section>
   )
 }

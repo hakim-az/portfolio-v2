@@ -102,7 +102,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className='pt-24'>
-        <div className="box-container flex items-center justify-evenly flex-wrap">
+        <div className="box-container flex items-center justify-evenly flex-wrap overflow-hidden">
             <Title Title='Projetcs'/>
             {/* Projects */}
             {projects.slice(0,more).map((project) => <Project key={project.id} image={project.image} title={project.title} viewUrl={project.viewUrl} githubUrl={project.githubUrl} /> )}

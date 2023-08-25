@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import whiteHamburger from '../../assets/images/white-hamburger.png'
 import blackHamburger from '../../assets/images/black-hamburger.png'
 import './Navbar.css'
+import { motion } from "framer-motion"
 
 const Navbar = () => {
 
@@ -13,7 +14,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className={`fixed top-0 w-full ${navbar ? "bg-gray-900" : "bg-white"}`}>
+        <motion.nav initial={{ y:'-200px' }} animate={{  y: "0"  }} transition={{ duration: 0.5, delay: 0.1 }} className={`fixed top-0 w-full ${navbar ? "bg-gray-900" : "bg-white"} z-40`}>
             <div className={`box-container h-20 flex items-center justify-between ${navbar ? "text-white" : "text-gray-900"}`}>
                 {/* Navbar Logo */}
                 <a href="#">
@@ -34,7 +35,7 @@ const Navbar = () => {
                     <li onClick={() => setHamburger(true)}><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-        </nav>
+        </motion.nav>
     )
 }
 

@@ -8,6 +8,7 @@ import Gmail from '../../assets/social/gmail.svg'
 import Linkedin from '../../assets/social/linkedin.svg'
 import Whatsapp from '../../assets/social/whatsapp.svg'
 import Form from "./Form"
+import { motion } from "framer-motion"
 
 
 const Contact = () => {
@@ -45,13 +46,13 @@ const Contact = () => {
             <div className="box-container flex items-center justify-evenly flex-wrap">
                 <Title Title='Contact me' />
                 {/* Contact image */}
-                <div className="w-2/5 max-[768px]:mb-12 flex items-center justify-center flex-col" style={{minWidth: '350px'}}>
+                <motion.div initial={{ opacity:0, x: '-300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="w-2/5 max-[768px]:mb-12 flex items-center justify-center flex-col" style={{minWidth: '350px'}}>
                     <h3 className='text-green-600 text-center text-4xl'>Get in touch !</h3>
                     <img className=" w-60 rounded" src={MessageImage} alt="message-icon" />
                     <div className="flex gap-4 mt-10">
                         {socials.map((social) => <a href={social.url} target="_blank" key={social.id}> <img className="w-10 h-10 rounded hover:bg-green-500 p-1" src={social.image} alt="social-icon" /></a> )}
                     </div>
-                </div>
+                </motion.div>
                 {/* Contact form */}
                 <Form />
             </div>

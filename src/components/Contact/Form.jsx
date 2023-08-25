@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { motion } from "framer-motion"
 
 
 const Form = () => {
@@ -60,7 +61,7 @@ const Form = () => {
 
 
     return (
-        <form onSubmit={handleSubmit} className="w-2/5" style={{minWidth: '350px'}}>
+        <motion.form initial={{ opacity:0, x: '300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} onSubmit={handleSubmit} className="w-2/5" style={{minWidth: '350px'}}>
             {/* input */}
             <div className="flex flex-col mb-5">
                 <label htmlFor="name" className="text-white text-lg pb-2" >Full name</label>
@@ -82,7 +83,7 @@ const Form = () => {
             </div>
             {/* Button */}
             <button type="submit" className='mt-5 float-right px-5 py-2 bg-green-600 rounded-sm text-base text-white hover:bg-green-500'>Submit</button>
-        </form>
+        </motion.form>
     )
 }
 

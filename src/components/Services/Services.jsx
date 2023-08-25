@@ -40,7 +40,7 @@ const Services = () => {
 
   return (
     <section id="services" className="pt-24">
-        <div className="box-container flex flex-wrap justify-evenly items-stretch">
+        <div className="box-container flex flex-wrap justify-evenly items-stretch overflow-hidden">
             <Title Title='Services'/>
             {services.map((service) => <Service key={service.id} title={service.title} description={service.description} /> )}
         </div>
