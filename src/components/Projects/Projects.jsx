@@ -105,7 +105,7 @@ const Projects = () => {
         <div className="box-container flex items-center justify-evenly flex-wrap overflow-hidden">
             <Title Title='Projetcs'/>
             {/* Projects */}
-            {projects.slice(0,more).map((project) => <Project key={project.id} image={project.image} title={project.title} viewUrl={project.viewUrl} githubUrl={project.githubUrl} /> )}
+            {projects.slice(0,more).map(({id, image, title, githubUrl, viewUrl}) => <Project key={id} image={image} title={title} viewUrl={viewUrl} githubUrl={githubUrl} /> )}
             {/* Button view more/less */}
             {
               view 

@@ -3,7 +3,7 @@ import GitHub from '../../assets/skills/github.svg'
 import { motion } from "framer-motion"
 
 
-const Project = ({image, title, githubUrl, viewUrl, figmaUrl}) => {
+const Project = ({image, title, githubUrl, viewUrl}) => {
   return (
     <motion.div   initial={{ opacity:0, x: '-400px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className='w-2/5 mb-10' style={{minWidth: '350px'}}>
         <div className='w-full h-80 bg-white rounded max-[834px]:h-56' style={{backgroundImage : `url(${image})`, backgroundPosition : 'center', backgroundSize: 'cover', backgroundRepeat : 'no-repeat'}}>
