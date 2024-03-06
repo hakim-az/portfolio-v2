@@ -35,7 +35,7 @@ const About = () => {
             {/* About content */}
             <motion.div initial={{ opacity:0, x: '-300px' }} whileInView={{ opacity:1, x: "0"  }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }} className="w-2/5" style={{minWidth: '350px'}}>
                 <p className="text-white py-4 text-justify">
-                    I`&apos;`m <span className="inline text-green-600">Azzaz Abdelhakim</span> a passionate and dedicated individual with a unique blend of skills, combining my expertise as a frontend React.js web developer with my ongoing studies in network administration as a Master`&apos;`s degree student at the university.
+                    I&apos;m <span className="inline text-green-600">Azzaz Abdelhakim</span> a passionate and dedicated individual with a unique blend of skills, combining my expertise as a frontend React.js web developer with my ongoing studies in network administration as a Master&apos;s degree student at the university.
                 </p>
                 <p className="text-white py-4 text-justify">
                     As a <span className="inline text-green-600">Frontend developer</span>, I thrive on transforming ideas and concepts into delightful user experiences. With a keen eye for design and an understanding of user behavior, I craft intuitive and responsive web applications that not only look fantastic but also provide seamless interactions. My proficiency in React Js allows me to build dynamic and cutting-edge websites that cater to the needs of modern-day users.

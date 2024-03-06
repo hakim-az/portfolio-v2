@@ -65,20 +65,20 @@ const Form = () => {
             {/* input */}
             <div className="flex flex-col mb-5">
                 <label htmlFor="name" className="text-white text-lg pb-2" >Full name</label>
-                <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
+                <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} placeholder='Your Full Name' className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
                 {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>} 
             </div>
             
             {/* input */}
             <div className="flex flex-col mb-5">
                 <label htmlFor="email" className="text-white text-lg pb-2" >Email</label>
-                <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
+                <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} placeholder='Your Email' className="py-2 px-3 rounded outline-none border-2 focus:border-green-600 text-lg"  />
                 {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
             </div> 
             {/* input */}
             <div className="flex flex-col">
                 <label htmlFor="message" className="text-white text-lg pb-2" >Message</label>
-                <textarea name="message"  id="message" value={formData.message} onChange={handleChange} className="p-3 border-2 focus:border-green-600 text-lg outline-none rounded" style={{height : '150px', resize: 'none'}} ></textarea>
+                <textarea name="message"  id="message" value={formData.message} onChange={handleChange} placeholder='Your Message' className="p-3 border-2 focus:border-green-600 text-lg outline-none rounded" style={{height : '150px', resize: 'none'}} ></textarea>
                 {errors.message && <p className='text-red-500 text-sm '>{errors.message}</p>}
             </div>
             {/* Button */}
