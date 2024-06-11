@@ -11,6 +11,12 @@ import ProjectSeven from '../../assets/projects/project-7.png'
 import ProjectHeight from '../../assets/projects/project-8.png'
 import ProjectNine from '../../assets/projects/project-9.png'
 import ProjectTen from '../../assets/projects/project-10.png'
+import DeepMinds from '../../assets/projects/deepminds.png'
+import Hubforward from '../../assets/projects/hubforward.png'
+import ProvenMed from '../../assets/projects/provenmed.png'
+import Rdock from '../../assets/projects/rdock.png'
+import Root4ai from '../../assets/projects/root4ai.png'
+import Vitalls from '../../assets/projects/vitalls.png'
 
 
 const Projects = () => {
@@ -18,69 +24,111 @@ const Projects = () => {
   const projects = [
     {
       id : 1,
+      image : DeepMinds,
+      title : 'Deepminds',
+      viewUrl : 'https://www.deepminds.me/',
+      githubUrl : '#',
+    },
+    {
+      id : 2,
+      image : Hubforward,
+      title : 'Hubforward',
+      viewUrl : 'https://hubforward.com/',
+      githubUrl : '#',
+    },
+    {
+      id : 3,
+      image : ProvenMed,
+      title : 'ProvenMed',
+      viewUrl : 'https://www.provenmed.com/',
+      githubUrl : '#',
+    },
+    {
+      id : 4,
+      image : Rdock,
+      title : 'Rdock',
+      viewUrl : 'https://rdock.co/',
+      githubUrl : '#',
+    },
+    {
+      id : 5,
+      image : Root4ai,
+      title : 'Root4Ai',
+      viewUrl : 'https://www.root4.ai/',
+      githubUrl : '#',
+    },
+    {
+      id : 6,
+      image : Vitalls,
+      title : 'Vitalls',
+      viewUrl : 'https://vitalls.ai/',
+      githubUrl : '#',
+    },
+    {
+      id : 7,
       image : ProjectOne,
       title : 'Life Time',
       viewUrl : 'https://life-time.netlify.app/',
       githubUrl : '#',
     },
     {
-      id : 2,
+      id : 8,
       image : ProjectTwo,
       title : 'Sunny',
       viewUrl : 'https://comforting-licorice-482ab1.netlify.app/',
       githubUrl : '#',
     },
     {
-      id : 3,
+      id : 9,
       image : ProjectThree,
       title : 'Furni Shop',
       viewUrl : 'https://furni-shop-dz.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/FurniShop',
     },
     {
-      id : 4,
+      id : 10,
       image : ProjectFour,
       title : 'Agency Exconsultancy',
       viewUrl : 'https://agency-exconsultancy.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/agency',
     },
     {
-      id : 5,
+      id : 11,
       image : ProjectFive,
       title : 'GPT-3 Website',
       viewUrl : 'https://gpt-3-website.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/GPT-3',
     },
     {
-      id : 6,
+      id : 12,
       image : ProjectSix,
       title : 'Easy Bank',
       viewUrl : 'https://web-05-easybank.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/web-05-Easybank',
     },
     {
-      id : 7,
+      id : 13,
       image : ProjectSeven,
       title : 'Blogr',
       viewUrl : 'https://web-03-blogr.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/web-03-Blogr',
     },
     {
-      id : 8,
+      id : 14,
       image : ProjectHeight,
       title : 'Loop Studios',
       viewUrl : 'https://web-04-loopstudios.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/web-04-Loopstudios',
     },
     {
-      id : 9,
+      id : 15,
       image : ProjectNine,
       title : 'Focal Portfolio',
       viewUrl : 'https://web-01-foacl-portfolio.netlify.app/',
       githubUrl : 'https://github.com/hakim-az/web-01-FOCAL',
     },
     {
-      id : 10,
+      id : 16,
       image : ProjectTen,
       title : 'Sunny Side',
       viewUrl : 'https://web-02-sunnyside.netlify.app/',
